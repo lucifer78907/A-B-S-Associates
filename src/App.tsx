@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom"
 // Pages
 import Homepage from "./pages/Homepage"
 import RootLayout from "./layout/RootLayout"
+import About from "./pages/About"
 
 
 function App() {
@@ -13,6 +14,10 @@ function App() {
         {
           index: true,
           element: <Homepage />
+        },
+        {
+          path: 'about',
+          element: <About />
         }
       ]
     }

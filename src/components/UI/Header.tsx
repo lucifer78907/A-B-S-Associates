@@ -9,10 +9,10 @@ const Header = () => {
             className='h-14 md:h-24'
         />
         <nav>
-            <ul className='flex gap-6 items-center text-2xl font-inter mr-4'>
+            <ul className='flex gap-6 items-center text-2xl font-lato mr-4'>
                 <NavLink to={'/'}>Home</NavLink>
                 <NavLink to={'/'}>Team</NavLink>
-                <NavLink to={'/'}>About</NavLink>
+                <NavLink to={'/about'}>About</NavLink>
                 <NavLink to={'/'}>Services</NavLink>
                 <NavLink to={'/'}>Practice Areas</NavLink>
                 <NavLink to={'/'}>Contact</NavLink>
