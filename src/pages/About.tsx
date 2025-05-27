@@ -1,10 +1,13 @@
+import { IoDocumentLock } from "react-icons/io5"
 import { BoldContent } from "../components/UI/BoldContent"
+import { FaCheckCircle, FaHandshake, FaLock, FaRegStar, FaUserTie } from "react-icons/fa"
+import { GiStarsStack } from "react-icons/gi"
 
 function About() {
     return (
         <section className="p-6 font-lato w-3/5 mx-auto">
             <h2 className="text-blue-500 text-7xl font-bold font-display text-center">About us</h2>
-            <main className="mt-6 flex flex-col items-center gap-8">
+            <main className="mt-6 flex flex-col items-center gap-8 mb-10">
                 <article>
                     <p className="text-xl mt-6">
                         <BoldContent>ABS Associates </BoldContent>is a leading chartered accountancy firm dedicated to providing exceptional financial services and solutions. With a team of highly qualified professionals, we specialize in accounting, auditing, taxation, and advisory services tailored to meet the unique needs of our clients.
@@ -29,8 +32,29 @@ function About() {
                 </article>
 
                 <h2 className="mt-10 self-start text-blue-500 text-5xl font-bold font-display">Service Methodology</h2>
-                <article className="flex flex-col gap-4 mt-2">
-
+                <article className="flex justify-between gap-16 mt-10 mb-8">
+                    <div className="flex flex-col items-center gap-3 text-xl">
+                        <div className="bg-blue-100 shadow-sm p-4 flex items-center justify-center rounded-full">
+                            <GiStarsStack size={'2em'} className="text-blue-500" />
+                        </div>
+                        <span>Commitment to Quality</span>
+                    </div>
+                    <div className="flex flex-col items-center gap-3 text-xl">
+                        <div className="bg-blue-100 shadow-sm p-4 flex items-center justify-center rounded-full">
+                            <IoDocumentLock size={'2em'} className="text-blue-500" />
+                        </div>
+                        <span>Absolute Confidentiality</span>
+                    </div><div className="flex flex-col items-center gap-3 text-xl">
+                        <div className="bg-blue-100 shadow-sm p-4 flex items-center justify-center rounded-full">
+                            <FaUserTie size={'2em'} className="text-blue-500" />
+                        </div>
+                        <span>Professional Objectivity</span>
+                    </div><div className="flex flex-col items-center gap-3 text-xl">
+                        <div className="bg-blue-100 shadow-sm p-4 flex items-center justify-center rounded-full">
+                            <FaHandshake size={'2em'} className="text-blue-500" />
+                        </div>
+                        <span>Tailored Solutions</span>
+                    </div>
                 </article>
 
             </main>
