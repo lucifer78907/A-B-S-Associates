@@ -1,11 +1,14 @@
-import heroImg from '../assets/potrait.png'
+import Hero from "../components/Hero"
+import MissionVisionExperienceSlider from "../components/Mission"
+import WhyUs from "../components/WhyUs"
 
 function Homepage() {
     return (
-        <section className="p-6 font-lato  h-[85vh] flex justify-around">
-            <h1 className="text-8xl font-display flex mt-20 flex-col items-center">ABS associates <span>Chartered accountants</span></h1>
-            <img src={heroImg} className='h-3/4' />
-        </section>
+        <>
+            <Hero />
+            <WhyUs />
+            <MissionVisionExperienceSlider />
+        </>
     )
 }
 
