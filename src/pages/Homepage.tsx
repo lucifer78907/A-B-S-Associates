@@ -1,5 +1,6 @@
 import Hero from "../components/Hero"
 import MissionVisionExperienceSlider from "../components/Mission"
+import TestimonialsSection from "../components/Testimonials"
 import WhyUs from "../components/WhyUs"
 
 function Homepage() {
@@ -8,6 +9,7 @@ function Homepage() {
             <Hero />
             <WhyUs />
             <MissionVisionExperienceSlider />
+            <TestimonialsSection />
         </>
     )
 }

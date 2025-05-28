@@ -26,7 +26,7 @@ const slides = [
 
 const MissionVisionExperienceSlider: React.FC = () => {
     return (
-        <section className="py-20 px-6 md:px-12 bg-gradient-to-b from-white to-blue-50">
+        <section className="py-20 px-6 md:px-12 ">
 
             <h2 className="text-blue-500 text-7xl font-bold font-display text-center mb-12">
                 Mission , Vision & Experience
