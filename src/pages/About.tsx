@@ -1,6 +1,6 @@
 import { IoDocumentLock } from "react-icons/io5"
 import { BoldContent } from "../components/UI/BoldContent"
-import { FaCheckCircle, FaHandshake, FaLock, FaRegStar, FaUserTie } from "react-icons/fa"
+import { FaHandshake, FaUserTie } from "react-icons/fa"
 import { GiStarsStack } from "react-icons/gi"
 
 function About() {

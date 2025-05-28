@@ -3,6 +3,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import Homepage from "./pages/Homepage"
 import RootLayout from "./layout/RootLayout"
 import About from "./pages/About"
+import FoundingMembers from "./pages/FoundingMembers"
+import Contact from "./pages/Contact"
 
 
 function App() {
@@ -18,6 +20,23 @@ function App() {
         {
           path: 'about',
           element: <About />
+        },
+        {
+          path: 'team',
+          children: [
+            {
+              path: 'founding-members',
+              element: <FoundingMembers />
+            },
+            {
+              path: 'key-staff',
+              element: <div>Key Staff Page</div>
+            }
+          ]
+        },
+        {
+          path: 'contact',
+          element: <Contact />
         }
       ]
     }
