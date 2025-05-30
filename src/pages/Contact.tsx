@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { MdLocationOn, MdEmail, MdPhone } from "react-icons/md";
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -17,43 +18,54 @@ const Contact = () => {
         window.location.href = `mailto:example@example.com?subject=Contact from ${formData.name}&body=Phone: ${formData.phone}%0D%0AEmail: ${formData.email}%0D%0A%0D%0A${formData.message}`;
     };
 
+    const offices = [
+        {
+            title: "Head Office",
+            address: "J-45 Basement, Outer Ring Road, Pillar No.9, Vikaspuri - 110018, New Delhi",
+            phone: "011-43709400",
+            email: "admin@ssperiwal.co.in",
+        },
+        {
+            title: "Gurugram Office",
+            address: "L-4/23, First Floor, DLF City Phase-2, Gurugram - 122008, Haryana",
+            phone: "011-43702327",
+            email: "ssperiwaloffice@gmail.com",
+        },
+        {
+            title: "Chandigarh Office",
+            address: "1202, Sector 44B, Chandigarh - 160047, Punjab",
+            phone: "+91 7087667225",
+            email: "ssptricity@gmail.com",
+        },
+    ];
+
     return (
-        <div className="min-h-screen bg-gray-100 p-6">
+        <div className="min-h-screen  p-6 md:p-12 space-y-16">
+            <h2 className="text-blue-500 text-7xl font-bold font-display text-center mb-6">Contact us</h2>
+            <p className="text-gray-600 text-lg sm:text-xl mb-12 text-center mx-auto">
+                We are here to assist you with all your audit, tax, and advisory needs. Reach out to us through any of our office locations or fill out the contact form below.
+            </p>
             {/* Office Locations */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-                {[
-                    {
-                        title: "Head Office",
-                        address: "J-45 Basement, Outer Ring Road, Pillar No.9, Vikaspuri - 110018, New Delhi",
-                        phone: "011-43709400",
-                        email: "admin@ssperiwal.co.in",
-                    },
-                    {
-                        title: "Gurugram Office",
-                        address: "L-4/23, First Floor, DLF City Phase-2, Gurugram - 122008, Haryana",
-                        phone: "011-43702327",
-                        email: "ssperiwaloffice@gmail.com",
-                    },
-                    {
-                        title: "Chandigarh Office",
-                        address: "1202, Sector 44B, Chandigarh - 160047, Punjab",
-                        phone: "+91 7087667225",
-                        email: "ssptricity@gmail.com",
-                    },
-                ].map((office, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {offices.map((office, index) => (
                     <div
                         key={index}
-                        className="bg-white shadow-lg rounded-lg p-6 hover:shadow-2xl transition-shadow duration-300"
+                        className="bg-white shadow-md rounded-2xl p-6 border border-gray-200 hover:shadow-xl transition-shadow"
                     >
-                        <h3 className="text-xl font-semibold mb-4">{office.title}</h3>
-                        <p className="text-gray-600 mb-2">{office.address}</p>
-                        <p className="text-gray-600 mb-2">
-                            <span className="font-semibold">Phone:</span> {office.phone}
-                        </p>
-                        <p className="text-gray-600 mb-4">
-                            <span className="font-semibold">Email:</span> {office.email}
-                        </p>
-                        <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors duration-300">
+                        <h3 className="text-xl font-bold text-blue-600 mb-4">{office.title}</h3>
+                        <div className="flex items-start gap-2 mb-3 text-gray-700">
+                            <MdLocationOn className="text-blue-500 mt-1 text-xl" />
+                            <p>{office.address}</p>
+                        </div>
+                        <div className="flex items-center gap-2 mb-2 text-gray-700">
+                            <MdPhone className="text-blue-500 text-xl" />
+                            <span>{office.phone}</span>
+                        </div>
+                        <div className="flex items-center gap-2 text-gray-700">
+                            <MdEmail className="text-blue-500 text-xl" />
+                            <span>{office.email}</span>
+                        </div>
+                        <button className="mt-6 w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition">
                             Reach Us
                         </button>
                     </div>
@@ -61,53 +73,31 @@ const Contact = () => {
             </div>
 
             {/* Contact Form */}
-            <div className="bg-white shadow-lg rounded-lg p-8 max-w-2xl mx-auto">
-                <h2 className="text-2xl font-semibold mb-6 text-center">Contact Us</h2>
-                <form onSubmit={handleSubmit} className="space-y-4">
+            <div className="bg-white shadow-md rounded-2xl p-8 max-w-2xl mx-auto border border-gray-200">
+                <h2 className="text-3xl font-bold mb-6 text-center text-blue-600">Get in Touch</h2>
+                <form onSubmit={handleSubmit} className="space-y-6">
+                    {[
+                        { id: "name", type: "text", label: "Name", required: true },
+                        { id: "email", type: "email", label: "Email", required: true },
+                        { id: "phone", type: "tel", label: "Phone", required: true },
+                    ].map(({ id, type, label, required }) => (
+                        <div key={id}>
+                            <label htmlFor={id} className="block text-gray-700 font-semibold mb-1">
+                                {label}
+                            </label>
+                            <input
+                                id={id}
+                                type={type}
+                                name={id}
+                                value={formData[id as keyof typeof formData]}
+                                onChange={handleChange}
+                                required={required}
+                                className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            />
+                        </div>
+                    ))}
                     <div>
-                        <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
-                            Name
-                        </label>
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            value={formData.name}
-                            onChange={handleChange}
-                            className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            required
-                        />
-                    </div>
-                    <div>
-                        <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
-                            Email
-                        </label>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            required
-                        />
-                    </div>
-                    <div>
-                        <label htmlFor="phone" className="block text-gray-700 font-medium mb-2">
-                            Phone
-                        </label>
-                        <input
-                            type="tel"
-                            id="phone"
-                            name="phone"
-                            value={formData.phone}
-                            onChange={handleChange}
-                            className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            required
-                        />
-                    </div>
-                    <div>
-                        <label htmlFor="message" className="block text-gray-700 font-medium mb-2">
+                        <label htmlFor="message" className="block text-gray-700 font-semibold mb-1">
                             Message
                         </label>
                         <textarea
@@ -115,14 +105,14 @@ const Contact = () => {
                             name="message"
                             value={formData.message}
                             onChange={handleChange}
-                            className="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                             rows={4}
                             required
+                            className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         ></textarea>
                     </div>
                     <button
                         type="submit"
-                        className="w-full bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors duration-300"
+                        className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition"
                     >
                         Send Message
                     </button>
