@@ -5,6 +5,8 @@ import RootLayout from "./layout/RootLayout"
 import About from "./pages/About"
 import FoundingMembers from "./pages/FoundingMembers"
 import Contact from "./pages/Contact"
+import PracticeAreas from "./pages/PracticeAreas"
+import Services from "./pages/Services"
 
 
 function App() {
@@ -30,13 +32,21 @@ function App() {
             },
             {
               path: 'key-staff',
-              element: <div>Key Staff Page</div>
+              element: <div className="text-2xl my-6 text-center h-[100vh]">Coming Soon</div>
             }
           ]
         },
         {
           path: 'contact',
           element: <Contact />
+        },
+        {
+          path: 'practice-areas',
+          element: <PracticeAreas />
+        },
+        {
+          path: 'services',
+          element: <Services />
         }
       ]
     }
