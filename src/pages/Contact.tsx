@@ -15,29 +15,30 @@ const Contact = () => {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        window.location.href = `mailto:example@example.com?subject=Contact from ${formData.name}&body=Phone: ${formData.phone}%0D%0AEmail: ${formData.email}%0D%0A%0D%0A${formData.message}`;
+        window.location.href = `mailto:fcaabs@gmail.com?subject=Contact from ${formData.name}&body=Phone: ${formData.phone}%0D%0AEmail: ${formData.email}%0D%0A%0D%0A${formData.message}`;
     };
 
     const offices = [
         {
             title: "Head Office",
-            address: "J-45 Basement, Outer Ring Road, Pillar No.9, Vikaspuri - 110018, New Delhi",
-            phone: "011-43709400",
-            email: "admin@ssperiwal.co.in",
+            address: "B – I, Kaler Complex, Zira Road, Moga – 142001, Punjab",
+            phone: "01636 502871",
+            email: "fcaabs@gmail.com",
         },
         {
-            title: "Gurugram Office",
-            address: "L-4/23, First Floor, DLF City Phase-2, Gurugram - 122008, Haryana",
-            phone: "011-43702327",
-            email: "ssperiwaloffice@gmail.com",
+            title: "Ludhiana Office",
+            address: "549, Alamgir Enclave, Near J K Resort, Malerkotla Road, Ludhiana – 141116, Punjab",
+            phone: "0161 3154956",
+            email: "fcaabs@gmail.com",
         },
         {
-            title: "Chandigarh Office",
-            address: "1202, Sector 44B, Chandigarh - 160047, Punjab",
-            phone: "+91 7087667225",
-            email: "ssptricity@gmail.com",
+            title: "Jammu Office",
+            address: "24-C, East Extension, Friends Colony, Trikuta Nagar, Jammu Tawi-180015, Jammu",
+            phone: "+91 76967 93693",
+            email: "fcaabs@gmail.com",
         },
     ];
+
 
     return (
         <div className="min-h-screen  p-6 md:p-12 space-y-16">
@@ -65,59 +66,69 @@ const Contact = () => {
                             <MdEmail className="text-blue-500 text-xl" />
                             <span>{office.email}</span>
                         </div>
-                        <button className="mt-6 w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition">
-                            Reach Us
-                        </button>
                     </div>
                 ))}
             </div>
 
             {/* Contact Form */}
-            <div className="bg-white shadow-md rounded-2xl p-8 max-w-2xl mx-auto border border-gray-200">
-                <h2 className="text-3xl font-bold mb-6 text-center text-blue-600">Get in Touch</h2>
-                <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="bg-white border border-neutral-200 rounded-3xl shadow-2xl p-10 max-w-2xl mx-auto">
+                <h2 className="text-4xl sm:text-5xl font-bold mb-10 text-center font-display text-blue-600">
+                    Get in Touch
+                </h2>
+                <form onSubmit={handleSubmit} className="space-y-8">
                     {[
-                        { id: "name", type: "text", label: "Name", required: true },
-                        { id: "email", type: "email", label: "Email", required: true },
-                        { id: "phone", type: "tel", label: "Phone", required: true },
+                        { id: "name", type: "text", label: "Your Name", required: true },
+                        { id: "email", type: "email", label: "Your Email", required: true },
+                        { id: "phone", type: "tel", label: "Phone Number", required: true },
                     ].map(({ id, type, label, required }) => (
-                        <div key={id}>
-                            <label htmlFor={id} className="block text-gray-700 font-semibold mb-1">
-                                {label}
-                            </label>
+                        <div key={id} className="relative">
                             <input
                                 id={id}
                                 type={type}
                                 name={id}
+                                required={required}
                                 value={formData[id as keyof typeof formData]}
                                 onChange={handleChange}
-                                required={required}
-                                className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                className="peer w-full border border-gray-300 rounded-xl px-4 pt-5 pb-2 text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder-transparent transition-all duration-300"
+                                placeholder={label}
                             />
+                            <label
+                                htmlFor={id}
+                                className="absolute left-4 top-2 text-gray-500 text-sm transition-all duration-300 peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:text-sm peer-focus:text-blue-600"
+                            >
+                                {label}
+                            </label>
                         </div>
                     ))}
-                    <div>
-                        <label htmlFor="message" className="block text-gray-700 font-semibold mb-1">
-                            Message
-                        </label>
+
+                    <div className="relative">
                         <textarea
                             id="message"
                             name="message"
+                            rows={5}
+                            required
                             value={formData.message}
                             onChange={handleChange}
-                            rows={4}
-                            required
-                            className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            className="peer w-full border border-gray-300 rounded-xl px-4 pt-5 pb-2 text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 placeholder-transparent transition-all duration-300"
+                            placeholder="Your Message"
                         ></textarea>
+                        <label
+                            htmlFor="message"
+                            className="absolute left-4 top-2 text-gray-500 text-sm transition-all duration-300 peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:text-sm peer-focus:text-blue-600"
+                        >
+                            Your Message
+                        </label>
                     </div>
+
                     <button
                         type="submit"
-                        className="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition"
+                        className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold text-lg py-3 rounded-xl shadow-md transition duration-300"
                     >
                         Send Message
                     </button>
                 </form>
             </div>
+
         </div>
     );
 };

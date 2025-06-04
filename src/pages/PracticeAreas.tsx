@@ -2,7 +2,6 @@ import {
     FaIndustry,
     FaSeedling,
     FaBuilding,
-    FaUniversity,
     FaBolt,
     FaHome,
     FaPills,
