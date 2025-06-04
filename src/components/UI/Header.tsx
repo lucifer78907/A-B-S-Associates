@@ -29,10 +29,10 @@ const Header = () => {
                             </li>
                             <li>
                                 <NavLink
-                                    to="/team/key-staff"
+                                    to="/team/core-team"
                                     className="block px-4 py-2 hover:bg-gray-100"
                                 >
-                                    Key Staff
+                                    Core Team
                                 </NavLink>
                             </li>
                         </ul>

@@ -7,6 +7,7 @@ import FoundingMembers from "./pages/FoundingMembers"
 import Contact from "./pages/Contact"
 import PracticeAreas from "./pages/PracticeAreas"
 import Services from "./pages/Services"
+import CoreStaff from "./pages/CoreStaff"
 
 
 function App() {
@@ -31,8 +32,8 @@ function App() {
               element: <FoundingMembers />
             },
             {
-              path: 'key-staff',
-              element: <div className="text-2xl my-6 text-center h-[100vh]">Coming Soon</div>
+              path: 'core-team',
+              element: <CoreStaff />
             }
           ]
         },

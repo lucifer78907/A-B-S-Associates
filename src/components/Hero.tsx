@@ -11,7 +11,7 @@ function Hero() {
                         Your Trusted <span className="text-blue-700">Financial Partner</span>
                     </h1>
                     <p className="text-gray-600 text-lg sm:text-xl mb-8 font-lato leading-relaxed">
-                        ABS & Associates helps businesses grow with strategic audit, tax planning, financial advisory, and over 13 years of excellence in service delivery.
+                        A B S & Associates supports business growth through expert services in Strategic Financial Planning, IPO Planning, Debt Syndication, Compliances, Audits, Tax Planning, Financial Advisory, and more, with over 13 years of exceptional service delivery.
                     </p>
                     <div className="flex flex-col sm:flex-row items-center gap-4">
                         <a

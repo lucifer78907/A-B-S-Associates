@@ -6,13 +6,13 @@ const whyChooseUs = [
         id: 1,
         icon: <FaRegClock className="text-blue-600 text-3xl" />,
         title: "13+ Years of Experience",
-        description: "Trusted expertise in Audit, Taxation, and Financial Advisory since 2012."
+        description: "Trusted expertise in Strategic Financial Planning, IPO Planning, Debt Syndication, Compliances, Audits, Tax Planning, Financial Advisory, and more Advisory since 2012."
     },
     {
         id: 2,
         icon: <FaClipboardList className="text-blue-600 text-3xl" />,
         title: "Comprehensive Services Under One Roof",
-        description: "From compliance to strategic planning, we offer end-to-end financial solutions."
+        description: "From compliance to strategic planning, we offer end-to-end solutions."
     },
     {
         id: 3,
@@ -30,13 +30,13 @@ const whyChooseUs = [
         id: 5,
         icon: <FaUsers className="text-blue-600 text-3xl" />,
         title: "Expert Team with Industry Insight",
-        description: "A skilled team of 20+ professionals led by 10 seasoned partners across multiple sectors."
+        description: "A skilled team of 20+ professionals led by 5 seasoned partners across multiple sectors."
     },
     {
         id: 6,
         icon: <FaChartLine className="text-blue-600 text-3xl" />,
         title: "Growth-Oriented Financial Strategies",
-        description: "We go beyond compliance by offering strategic advice that drives long-term business growth."
+        description: "We align compliance with strategic guidance to fuel sustainable business growth."
     }
 ];
 
