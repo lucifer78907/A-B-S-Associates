@@ -1,120 +1,320 @@
-import {
-    FaBalanceScale,
-    FaCalculator,
-    FaFileInvoiceDollar,
-    FaFileSignature,
-    FaBuilding,
-    FaRegRegistered,
-} from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa6";
+import {
+    FaBriefcase,
+    FaGavel,
+    FaChartLine,
+    FaUniversity,
+    FaBalanceScale,
+    FaBuilding,
+    FaFileInvoiceDollar,
+    FaUserTie,
+    FaLandmark,
+    FaUserShield,
+    FaRegClipboard,
+} from "react-icons/fa";
 
 const services = [
     {
-        icon: <FaBalanceScale className="text-blue-700 text-3xl" />,
+        icon: <FaChartLine className="text-blue-700 text-3xl" />,
+        title: "Corporate Finance",
+        overview:
+            "Comprehensive financing solutions tailored for business growth, liquidity, and expansion across diverse markets.",
+        categories: [
+            {
+                label: null,
+                items: [
+                    "Debt Syndication Advisory",
+                    "Project & Structured Finance",
+                    "Trade Finance",
+                    "International Financing",
+                    "Debt Structuring",
+                    "Credit Rating Advisory",
+                    "Capital Market Transactions",
+                    "Private Equity & Venture Capital",
+                    "Project Finance",
+                    "Working Capital Finance",
+                    "Unsecured Funding",
+                    "Bridge Funding",
+                    "Letter of Credit",
+                    "Bank Guarantee",
+                    "Channel Finance",
+                    "Project Approval",
+                    "Buyers Credit",
+                    "Suppliers Credit",
+                    "Loan against Property",
+                    "Structured and Unstructured Funding",
+                    "Custom Financial Instruments",
+                ],
+            },
+        ],
+    },
+    {
+        icon: <FaBriefcase className="text-blue-700 text-3xl" />,
+        title: "IPO Planning",
+        overview:
+            "We guide businesses through every stage of going public, ensuring regulatory readiness and investor confidence.",
+        categories: [
+            {
+                label: null,
+                items: [
+                    "Pre-IPO Planning & Strategy",
+                    "Due Diligence & Financial Audits",
+                    "Prospectus Preparation",
+                    "Regulatory Compliance",
+                    "Valuation Advisory",
+                    "Investor Relations & Roadshow Support",
+                    "Post-IPO Compliance & Reporting",
+                ],
+            },
+        ],
+    },
+    {
+        icon: <FaGavel className="text-blue-700 text-3xl" />,
         title: "Audit & Assurance Services",
         overview:
-            "We view auditing not just as a regulatory necessity, but as a powerful tool for business transformation.",
+            "A comprehensive suite of audit services ensuring regulatory compliance, strategic insights, and governance excellence.",
         categories: [
             {
                 label: "Financial & Compliance Audits",
                 items: [
-                    "Statutory Audits",
-                    "Tax Audits",
-                    "Internal Audits",
-                    "Forensic Investigations",
+                    "Statutory Audits (Companies, LLPs, Trusts)",
+                    "Tax & Compliance Audits",
+                    "Internal Audits and Risk-Based Reviews",
+                    "Forensic & Fraud Investigations",
+                    "Special Purpose Audits",
+                    "Corporate Governance Certifications",
                 ],
             },
             {
                 label: "Accounting & Reporting Support",
                 items: [
-                    "Financial Statement Preparation",
-                    "Bookkeeping Reviews",
+                    "Financial Statements Preparation",
+                    "Consolidated Reporting",
+                    "Ledger Reviews & Reconciliations",
+                    "Bookkeeping & Record Maintenance",
                     "Payroll Accounting",
+                    "Indirect Tax Compliance",
+                ],
+            },
+            {
+                label: "Strategic Audit Advisory",
+                items: [
+                    "Internal Controls & Documentation",
+                    "Audit Function Support",
+                    "Accounting Policy Manuals",
+                    "Financial Projections",
+                    "Startup & M&A Assistance",
+                    "Agreed-Upon Procedures",
+                ],
+            },
+            {
+                label: "Risk & Regulatory Consulting",
+                items: [
+                    "Risk Assessments",
+                    "Regulatory Change Guidance",
+                    "Ind AS / IFRS Implementation",
+                    "Exchange Control Advisory",
+                    "Management Letters",
                 ],
             },
         ],
     },
     {
-        icon: <FaCalculator className="text-blue-700 text-3xl" />,
-        title: "Financial Accounting",
+        icon: <FaBalanceScale className="text-blue-700 text-3xl" />,
+        title: "Strategic Tax Advisory",
         overview:
-            "Our services go beyond bookkeeping—offering integrated GST advisory, statutory compliance, and insightful reporting.",
+            "Optimized tax strategies and international structuring to support business decisions, M&A, and cross-border operations.",
         categories: [
             {
-                label: "Financial Reporting",
-                items: ["MIS reports", "Audit Support", "Annual Financials"],
+                label: null,
+                items: [
+                    "Comprehensive Tax Planning",
+                    "Domestic and International Tax Structuring",
+                    "Business-Aligned Tax Strategy Review",
+                    "Advisory for M&A and Restructuring",
+                    "Group Reorganizations",
+                    "Tax Due Diligence",
+                    "Transfer Pricing & Dispute Resolution",
+                    "IFRS & US GAAP Reporting",
+                    "Cross-border Tax Planning",
+                ],
             },
+        ],
+    },
+    {
+        icon: <FaUniversity className="text-blue-700 text-3xl" />,
+        title: "Regulatory & Compliance Services",
+        overview:
+            "Expert assistance with tax filings, registrations, regulatory compliance, and ongoing statutory reporting.",
+        categories: [
             {
-                label: "Strategic Support",
-                items: ["Cash Flow Budgeting", "Capital Structuring"],
+                label: null,
+                items: [
+                    "Advance Tax Calculations & Advisory",
+                    "TDS Compliance",
+                    "Income Tax Return Filing",
+                    "PAN/FRRO for Non-Residents",
+                    "GST Compliance",
+                    "Regulatory Filing & Reporting",
+                    "RBI & Statutory Approvals",
+                    "Exchange Control Compliance",
+                ],
+            },
+        ],
+    },
+    {
+        icon: <FaUserShield className="text-blue-700 text-3xl" />,
+        title: "Litigation & Representation",
+        overview:
+            "Representation and support across all levels of tax litigation, dispute resolution, and strategic legal engagement.",
+        categories: [
+            {
+                label: null,
+                items: [
+                    "Representation before Tax Authorities",
+                    "Transfer Pricing Representation",
+                    "Tax Assessment & Scrutiny",
+                    "Litigation Strategy & Advice",
+                    "Coordination with Legal Counsels",
+                ],
             },
         ],
     },
     {
         icon: <FaFileInvoiceDollar className="text-blue-700 text-3xl" />,
-        title: "Income Tax Services",
+        title: "Indirect Tax & GST Services",
         overview:
-            "From personal filings to corporate tax strategy, we ensure accurate, compliant, and optimized outcomes.",
+            "End-to-end GST advisory including implementation, compliance, and optimizing tax positions in supply chains.",
         categories: [
             {
-                label: "Tax Return Filing",
-                items: ["Individual ITRs", "Corporate ITRs", "Proprietorship & HUF"],
-            },
-            {
-                label: "Tax Compliance",
-                items: ["TDS Returns", "Advance Tax Planning", "Scrutiny Support"],
+                label: null,
+                items: [
+                    "GST Implementation Assistance",
+                    "Supply Chain Tax Analysis",
+                    "Tax-Efficient Supply Chain Models",
+                    "GST Filing & Credit Utilization",
+                ],
             },
         ],
     },
     {
-        icon: <FaFileSignature className="text-blue-700 text-3xl" />,
-        title: "GST Services",
+        icon: <FaRegClipboard className="text-blue-700 text-3xl" />,
+        title: "Foreign Accounting & Other Tasks",
         overview:
-            "Stay ahead of GST compliance with automated filings, audit support, and strategic guidance.",
+            "Efficient international accounting, returns filing, and entity formation support for global operations.",
         categories: [
             {
-                label: "GST Filing & Compliance",
+                label: null,
                 items: [
-                    "GSTR-1, 3B, 9, 9C",
-                    "GST Registration",
-                    "Input Credit Reconciliation",
+                    "Accounts Management",
+                    "Returns Filing",
+                    "Company Formation",
+                    "Modifications & Amendments",
                 ],
-            },
-            {
-                label: "Advanced GST Help",
-                items: ["GST Audits", "Assessment Support", "E-invoicing Setup"],
             },
         ],
     },
     {
         icon: <FaBuilding className="text-blue-700 text-3xl" />,
-        title: "Incorporation & ROC",
+        title: "Financial Accounting",
         overview:
-            "From startup registration to annual compliance, we help you launch and grow legally and confidently.",
+            "Expert advice on optimizing tax implications, input credit structuring, and efficient financial operations under GST.",
         categories: [
             {
-                label: "Company Incorporation",
+                label: null,
                 items: [
-                    "Private Limited",
-                    "LLP",
-                    "Partnership & Proprietorship",
+                    "GST Impact Analysis",
+                    "Input Tax Credit Structuring",
+                    "Reverse Charge Advisory",
+                    "Optimized Tax Planning",
                 ],
-            },
-            {
-                label: "ROC Compliance",
-                items: ["Annual Filings", "DIR-3 KYC", "Board Resolution Drafting"],
             },
         ],
     },
     {
-        icon: <FaRegRegistered className="text-blue-700 text-3xl" />,
-        title: "Registrations",
+        icon: <FaUserTie className="text-blue-700 text-3xl" />,
+        title: "Virtual CFO",
         overview:
-            "Get registered with ease—from MSME and FSSAI to Import-Export licenses.",
+            "Strategic financial leadership and operational oversight through tailored virtual CFO services.",
         categories: [
             {
-                label: "Business & Govt. Registrations",
+                label: "Compliance",
                 items: [
+                    "Banks, Financial Institutions",
+                    "Income Tax & GST Department",
+                    "Government Departments",
+                ],
+            },
+            {
+                label: "Financial Management & Reporting",
+                items: [
+                    "MIS Reports",
+                    "Cost Analysis",
+                    "Audit & Statutory Reporting",
+                    "Business Consolidation",
+                    "Annual Financial Statements",
+                ],
+            },
+            {
+                label: "Strategic & Operational Support",
+                items: [
+                    "Cash Flow Budgeting",
+                    "Strategic Planning",
+                    "Capital Structuring",
+                    "Working Capital Optimization",
+                ],
+            },
+            {
+                label: "Tax & Compliance",
+                items: [
+                    "GST Compliance",
+                    "Withholding Tax Management",
+                    "Return Filing",
+                    "Tax Liability Reviews",
+                ],
+            },
+            {
+                label: "Payroll Support",
+                items: [
+                    "Payroll Processing",
+                    "Tax Documentation",
+                    "Liaison with Tax Authorities",
+                ],
+            },
+        ],
+    },
+    {
+        icon: <FaLandmark className="text-blue-700 text-3xl" />,
+        title: "Corporate Law Advisory",
+        overview:
+            "Comprehensive support for company formation, legal compliance, business restructuring, and closure.",
+        categories: [
+            {
+                label: null,
+                items: [
+                    "Formation of Entities (Company, LLP, Trust, etc.)",
+                    "Registered Address Transfer",
+                    "Legal & Financial Advisory",
+                    "Startup & Investment Compliance",
+                    "Management Changes & Statutory Records",
+                    "LLP Conversions",
+                    "Branch & Liaison Office Compliance",
+                    "Joint Ventures",
+                    "Winding-Up / Closure",
+                ],
+            },
+        ],
+    },
+    {
+        icon: <FaRegClipboard className="text-blue-700 text-3xl" />,
+        title: "Registrations",
+        overview:
+            "Fast and compliant registration services for business and statutory operations.",
+        categories: [
+            {
+                label: null,
+                items: [
+                    "GST Registration",
                     "MSME (Udyam)",
                     "FSSAI",
                     "Shop & Establishment",
@@ -128,11 +328,11 @@ const services = [
 export default function Services() {
     return (
         <section className="max-w-7xl mx-auto px-4 py-16">
-            <h2 className="text-blue-500 text-7xl font-bold font-display text-center mb-6">
+            <h2 className="text-blue-500 text-5xl sm:text-6xl font-bold font-display text-center mb-6">
                 Our Services
             </h2>
-            <p className="text-neutral-600 text-lg sm:text-xl mb-12 text-center mx-auto ">
-                We offer a comprehensive suite of services designed to meet the diverse needs of our clients, from startups to established enterprises.
+            <p className="text-neutral-600 text-lg sm:text-xl mb-12 text-center mx-auto max-w-3xl">
+                We deliver a wide array of specialized services for individuals, startups, enterprises, and global organizations.
             </p>
 
             <div className="space-y-16">
@@ -153,11 +353,12 @@ export default function Services() {
                         <div className="space-y-8">
                             {service.categories.map((cat, i) => (
                                 <div key={i}>
-                                    <h4 className="text-neutral-600 font-semibold text-lg mb-4">
-                                        {cat.label}
-                                    </h4>
-
-                                    <div className="flex flex-wrap gap-4 items-center">
+                                    {cat.label && (
+                                        <h4 className="text-neutral-600 font-semibold text-lg mb-4">
+                                            {cat.label}
+                                        </h4>
+                                    )}
+                                    <div className="flex flex-wrap gap-4">
                                         {cat.items.map((item, idx) => (
                                             <div
                                                 key={idx}
@@ -179,5 +380,3 @@ export default function Services() {
         </section>
     );
 }
-
-
