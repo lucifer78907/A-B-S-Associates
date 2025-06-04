@@ -14,7 +14,7 @@ function Hero() {
                     <p className="text-gray-600 text-sm sm:text-base sm:text-xl mb-8 font-lato leading-relaxed">
                         A B S & Associates supports business growth through expert services in Strategic Financial Planning, IPO Planning, Debt Syndication, Compliances, Audits, Tax Planning, Financial Advisory, and more, with over 13 years of exceptional service delivery.
                     </p>
-                    <div className="flex flex-col sm:flex-row items-center gap-4">
+                    <div className="flex flex-col sm:flex-row sm:justify-center lg:justify-start items-center gap-4">
                         <NavLink
                             to={'/contact'}
                             className="bg-blue-700 hover:bg-blue-800 transition-all text-white font-semibold px-6 py-3 rounded-xl shadow-md"

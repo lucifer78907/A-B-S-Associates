@@ -1,54 +1,41 @@
-# React + TypeScript + Vite
+# 🧾 ABS Associates — Chartered Accountancy Firm Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the official repository for **ABS Associates**, a modern and responsive website developed for a reputed Chartered Accountancy firm. This web application is designed to represent the firm’s professional services, values, and expertise with elegance and efficiency.
 
-Currently, two official plugins are available:
+## 🌟 Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ABS Associates offers a wide range of CA services including Audit & Assurance, Tax Advisory, Compliance Management, Corporate Finance, and Virtual CFO services. This website acts as their digital identity—clean, fast, and trustworthy.
 
-## Expanding the ESLint configuration
+## 🚀 Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React** – Component-based architecture for building interactive UIs
+- **TypeScript** – Type-safe codebase for scalability and maintainability
+- **Tailwind CSS** – Utility-first styling for a sleek, responsive design
+- **React Router** – Smooth multi-page navigation
+- **Firebase** – Secure, scalable backend and hosting by Google
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 📌 Key Features
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- ✅ Fully responsive layout for desktop, tablet, and mobile
+- ✅ Professionally designed service pages highlighting core CA offerings
+- ✅ Client inquiry integration via WhatsApp and email
+- ✅ Deployed securely on Firebase Hosting
+- ✅ SEO-friendly structure and fast load times
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📁 Folder Structure
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+├── public
+│   ├── assets/
+│   └── index.html
+├── src
+│   ├── components/
+│   ├── pages/
+│   ├── layout/
+│   ├── App.tsx
+│   ├── main.tsx
+├── tailwind.config.ts
+├── tsconfig.json
+├── vite.config.ts
+└── README.md
 ```
