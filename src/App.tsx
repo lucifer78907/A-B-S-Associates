@@ -8,6 +8,7 @@ import Contact from "./pages/Contact"
 import PracticeAreas from "./pages/PracticeAreas"
 import Services from "./pages/Services"
 import CoreStaff from "./pages/CoreStaff"
+import ErrorPage from "./pages/ErrorPage"
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
     {
       path: '/',
       element: <RootLayout />,
+      errorElement: <ErrorPage />,
       children: [
         {
           index: true,
