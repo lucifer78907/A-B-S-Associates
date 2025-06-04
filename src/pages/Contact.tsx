@@ -42,8 +42,10 @@ const Contact = () => {
 
     return (
         <div className="min-h-screen  p-6 md:p-12 space-y-16">
-            <h2 className="text-blue-500 text-7xl font-bold font-display text-center mb-6">Contact us</h2>
-            <p className="text-gray-600 text-lg sm:text-xl mb-12 text-center mx-auto">
+            <h2 className="text-blue-500 text-5xl lg:text-7xl font-bold font-display text-center mb-12">
+                Contact Us
+            </h2>
+            <p className="text-gray-600 text-sm md:text-base lg:text-xl sm:text-xl mb-12 text-center mx-auto">
                 We are here to assist you with all your audit, tax, and advisory needs. Reach out to us through any of our office locations or fill out the contact form below.
             </p>
             {/* Office Locations */}

@@ -67,7 +67,7 @@ const getColorClass = (name: string) => {
 const TestimonialsSection = () => {
     return (
         <section className="bg-gradient-to-br py-20 px-4 md:px-12">
-            <h2 className="text-blue-500 text-7xl font-bold font-display text-center mb-12">
+            <h2 className="text-blue-600 text-4xl sm:text-5xl lg:text-7xl  font-bold font-display text-center mb-12">
                 What our Clients Say
             </h2>
 

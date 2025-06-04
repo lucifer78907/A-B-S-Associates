@@ -52,11 +52,11 @@ const services = [
 
 export default function PracticeAreas() {
     return (
-        <section className="bg-white py-16 px-4 sm:px-8 lg:px-20">
-            <h2 className="text-blue-500 text-7xl font-bold font-display text-center mb-12">
+        <section className="bg-white py-5 md:py-16 px-4 sm:px-8 lg:px-20">
+            <h2 className="text-blue-500 text-5xl lg:text-7xl font-bold font-display text-center mb-12">
                 Practice Areas
             </h2>
-            <p className="text-gray-600 text-lg sm:text-xl mb-12 text-center mx-auto max-w-3xl">
+            <p className="text-gray-600 text-base sm:text-xl mb-12 text-center mx-auto max-w-3xl">
                 At ABS & Associates, we specialize in a wide range of industries, providing tailored audit, tax, and advisory services to help your business thrive.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">

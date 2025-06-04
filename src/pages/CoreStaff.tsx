@@ -1,4 +1,3 @@
-
 const colors = [
     'bg-blue-500',
     'bg-green-500',
@@ -43,27 +42,37 @@ const coreStaffData = [
 
 function CoreStaff() {
     return (
-        <section className="p-6 font-lato w-3/4 mx-auto">
-            <h1 className="text-6xl font-bold font-display mb-4 text-blue-500 text-center">Core Staff</h1>
-            <p className="text-lg text-gray-700 mb-8 text-center">
+        <section className="p-6 sm:p-10 font-lato max-w-7xl mx-auto">
+            <h1 className="text-5xl sm:text-6xl font-bold font-display mb-6 text-blue-500 text-center">
+                Core Staff
+            </h1>
+            <p className="text-lg text-gray-600 mb-10 text-center max-w-3xl mx-auto">
                 Meet the core staff of A B S Associates, a diverse team with deep expertise in finance, operations, and strategic advisory.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {coreStaffData.map((staff, index) => {
-                    const initials = staff.name.split(" ").map(part => part[0]).join("").slice(0, 2).toUpperCase();
+                    const initials = staff.name
+                        .split(" ")
+                        .map(part => part[0])
+                        .join("")
+                        .slice(0, 2)
+                        .toUpperCase();
+
                     const color = colors[index % colors.length];
 
                     return (
                         <div
                             key={index}
-                            className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+                            className="bg-white rounded-xl shadow-md hover:shadow-xl transition duration-300 p-6 flex flex-col items-center text-center"
                         >
-                            <div className={`w-32 h-32 mx-auto rounded-full flex items-center justify-center text-white text-3xl font-bold mb-4 ${color}`}>
+                            <div
+                                className={`w-24 h-24 rounded-full flex items-center justify-center text-white text-3xl font-bold mb-4 shadow-md ${color}`}
+                            >
                                 {initials}
                             </div>
-                            <h2 className="text-2xl font-semibold text-center text-gray-800">{staff.name}</h2>
-                            <h3 className="text-lg text-center text-gray-600">{staff.designation}</h3>
-                            <p className="mt-4 text-justify text-gray-700">{staff.about}</p>
+                            <h2 className="text-xl lg:text-2xl font-semibold text-gray-800">{staff.name}</h2>
+                            <h3 className="text-sm lg:text-base text-blue-500 font-medium mb-2">{staff.designation}</h3>
+                            <p className="text-gray-600 mt-2 text-sm lg:text-base text-justify">{staff.about}</p>
                         </div>
                     );
                 })}
