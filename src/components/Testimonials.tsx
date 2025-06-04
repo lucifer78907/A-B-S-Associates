@@ -1,4 +1,3 @@
-import React from "react";
 
 // Gravatar-friendly color palette (you can add more Tailwind classes)
 const avatarColors = [

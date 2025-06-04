@@ -1,6 +1,8 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
+// @ts-ignore
 import 'swiper/css';
+// @ts-ignore
 import 'swiper/css/navigation';
 
 import member1Img from '../assets/foundingMembers/avinash_photo.jpg';
