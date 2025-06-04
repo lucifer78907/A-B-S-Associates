@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom';
 import heroImg from '../assets/potrait.png';
 
 function Hero() {
@@ -14,18 +15,18 @@ function Hero() {
                         A B S & Associates supports business growth through expert services in Strategic Financial Planning, IPO Planning, Debt Syndication, Compliances, Audits, Tax Planning, Financial Advisory, and more, with over 13 years of exceptional service delivery.
                     </p>
                     <div className="flex flex-col sm:flex-row items-center gap-4">
-                        <a
-                            href="#contact"
+                        <NavLink
+                            to={'/contact'}
                             className="bg-blue-700 hover:bg-blue-800 transition-all text-white font-semibold px-6 py-3 rounded-xl shadow-md"
                         >
                             Get a Consultation
-                        </a>
-                        <a
-                            href="#services"
+                        </NavLink>
+                        <NavLink
+                            to="/services"
                             className="text-blue-700 font-medium hover:underline"
                         >
                             Explore Our Services →
-                        </a>
+                        </NavLink>
                     </div>
                 </div>
 
